@@ -75,6 +75,11 @@ alert-triage-agent/
 
 Live SIEM webhook receiver, a vector store for historical alert similarity search, tool calling for retrieval instead of fixed file reads, human in the loop escalation for low confidence verdicts, an audit trail of every model call, RBAC, and pricing aware caching. None of that fits in 60 minutes.
 
+## Contributors
+
+- [@dev0558](https://github.com/dev0558) — Bhargav Raj Dutta, creator
+- [@techtrail42](https://github.com/techtrail42)
+
 ## Credits
 
 Built as a hackathon style POC. Synthetic data only. Not for production use.
