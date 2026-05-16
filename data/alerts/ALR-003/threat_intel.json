@@ -1,0 +1,27 @@
+{
+  "source": "Aggregated TI feeds (MISP, AlienVault OTX, AbuseIPDB, internal)",
+  "queried_indicators": [
+    {
+      "indicator": "api.linear.app",
+      "type": "domain",
+      "first_seen": "2019-03-14",
+      "last_seen": "2026-05-16",
+      "tags": ["saas", "productivity", "reputable_vendor"],
+      "abuseipdb_score": 0,
+      "owner": "Linear Orbit Inc, San Francisco USA",
+      "tls_certificate_issuer": "Cloudflare Inc ECC CA-3",
+      "notes": "Production API endpoint for Linear, a widely adopted project management SaaS used by major engineering organizations. Domain has been continuously registered since 2019. No reports of compromise or malicious use.",
+      "campaigns_observed": []
+    },
+    {
+      "indicator": "172.66.40.119",
+      "type": "ipv4",
+      "tags": ["cloudflare_edge", "cdn"],
+      "abuseipdb_score": 0,
+      "asn": "AS13335 Cloudflare Inc",
+      "notes": "Cloudflare edge node. Used by tens of thousands of legitimate SaaS services.",
+      "campaigns_observed": []
+    }
+  ],
+  "domain_categorization": "Business / Productivity Software (clean)"
+}

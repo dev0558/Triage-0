@@ -1,0 +1,11 @@
+{
+  "source": "Microsoft Defender for Endpoint",
+  "endpoint": "rdp-bastion-01",
+  "query_window": "2026-05-16T07:00:00Z to 2026-05-16T11:10:00Z",
+  "events": [
+    {"timestamp": "2026-05-16T07:00:00Z", "event": "host_status", "uptime_hours": 488, "active_users": 0, "last_interactive_login": "2026-05-12T10:22:11Z by ops-admin"}
+  ],
+  "edr_detections": [],
+  "process_anomalies": "None. No new processes spawned, no PowerShell activity, no scheduled task creation, no service registration.",
+  "note": "Host shows no signs of post-compromise activity. Brute force never advanced past authentication."
+}

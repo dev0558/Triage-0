@@ -1,0 +1,13 @@
+{
+  "source": "Windows Security Event Log (forwarded to SIEM) + RDP gateway",
+  "query_window": "2026-05-16T07:00:00Z to 2026-05-16T11:10:00Z",
+  "events": [
+    {"timestamp": "2026-05-16T07:14:08Z", "event": "auth_failed", "user": "Administrator", "src_ip": "192.241.137.84", "target": "rdp-bastion-01", "logon_type": "RemoteInteractive", "reason": "bad_password"},
+    {"timestamp": "2026-05-16T07:14:09Z", "event": "auth_failed", "user": "admin", "src_ip": "192.241.137.84", "target": "rdp-bastion-01", "logon_type": "RemoteInteractive", "reason": "bad_password"},
+    {"timestamp": "2026-05-16T07:14:11Z", "event": "auth_failed", "user": "sa", "src_ip": "192.241.137.84", "target": "rdp-bastion-01", "logon_type": "RemoteInteractive", "reason": "unknown_user"},
+    {"_aggregation": {"total_failed_attempts": 1247, "unique_target_usernames": 11, "unique_source_ips": 12, "duration_hours": 4.0, "top_usernames": ["Administrator", "admin", "sa", "ops", "jenkins", "deploy", "test", "guest", "user", "backup", "root"], "successful_authentications": 0, "pattern": "Sequential dictionary attack with rate limiting evasion (paced ~5 attempts per second per source IP, rotating between source IPs every 60-90 seconds)"}},
+    {"timestamp": "2026-05-16T11:08:14Z", "event": "auth_failed", "user": "deploy", "src_ip": "192.241.137.221", "target": "rdp-bastion-01", "logon_type": "RemoteInteractive", "reason": "bad_password"}
+  ],
+  "success_check": "Zero successful authentications from any source within 192.241.137.0/24 in the last 30 days.",
+  "internal_users_compromised": "None."
+}

@@ -1,0 +1,14 @@
+{
+  "source": "Palo Alto NGFW perimeter",
+  "query_window": "2026-05-16T09:00:00Z to 2026-05-16T10:00:00Z",
+  "events": [
+    {"timestamp": "2026-05-16T09:14:22Z", "action": "allowed", "src_ip": "10.50.18.42", "src_host": "DEV-MBP-04", "dst_ip": "172.66.40.119", "dst_host": "api.linear.app", "dst_port": 443, "service": "https-egress", "bytes_out": 4218, "bytes_in": 11420, "session_id": "fw-661201"},
+    {"timestamp": "2026-05-16T09:14:25Z", "action": "allowed", "src_ip": "10.50.18.42", "src_host": "DEV-MBP-04", "dst_ip": "172.66.40.119", "dst_host": "api.linear.app", "dst_port": 443, "service": "https-egress", "bytes_out": 2840, "bytes_in": 8221, "session_id": "fw-661202"},
+    {"_aggregation": {"src_host": "DEV-MBP-04", "dst_host": "api.linear.app", "total_connections": 47, "duration_minutes": 32, "total_bytes_out": 195840, "total_bytes_in": 2245680, "pattern": "Many small JSON exchanges, consistent with API polling. Average request size ~4KB. No large transfers."}}
+  ],
+  "egress_baseline_DEV-MBP-04": {
+    "typical_egress_destinations": ["api.github.com", "registry.npmjs.org", "slack.com", "notion.so", "figma.com", "*.linear.app (added 2026-05-12 to user-level allowlist via IT ticket)"],
+    "typical_daily_egress_bytes": 84000000,
+    "anomaly_score": 4.1
+  }
+}

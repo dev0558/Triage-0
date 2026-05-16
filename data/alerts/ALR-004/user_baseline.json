@@ -1,0 +1,11 @@
+{
+  "user": "n/a",
+  "display_name": "Multiple targeted accounts",
+  "department": "Infrastructure",
+  "target_asset": "rdp-bastion-01.corp.local",
+  "target_asset_role": "RDP jumpbox for ops team",
+  "target_asset_notes": "Originally intended as internal-only. Audit ticket IT-2026-0921 (open since 2026-04-02) flagged that this host has been internet-reachable on TCP/3389 due to a firewall rule misconfiguration following the network refresh. Remediation has been pending Infrastructure team capacity.",
+  "approved_external_access": false,
+  "mfa_required_for_rdp": false,
+  "anomaly_score_current": 7.8
+}

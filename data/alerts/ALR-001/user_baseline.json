@@ -1,0 +1,13 @@
+{
+  "user": "j.alvarez",
+  "display_name": "Javier Alvarez",
+  "department": "Finance",
+  "typical_login_hours_utc": "04:00 to 14:00",
+  "typical_source_geo": "Dubai, AE",
+  "typical_source_asn": "AS5384 Emirates Telecom",
+  "mfa_enrolled": false,
+  "last_password_change": "2024-08-12",
+  "approved_travel_requests_last_90d": [],
+  "ticketing_notes": "User has standing access to Finance share. No IT tickets in last 90 days. No reported travel.",
+  "anomaly_score_current": 9.4
+}

@@ -1,0 +1,25 @@
+{
+  "source": "Active Directory + VPN Gateway",
+  "query_window": "2026-05-16T06:10:00Z to 2026-05-16T06:35:00Z",
+  "events": [
+    {"timestamp": "2026-05-16T06:14:01Z", "event": "auth_failed", "user": "a.ahmed", "src_ip": "185.220.101.42", "target": "vpn-gw-01", "reason": "invalid_password"},
+    {"timestamp": "2026-05-16T06:14:08Z", "event": "auth_failed", "user": "b.khan", "src_ip": "185.220.101.42", "target": "vpn-gw-01", "reason": "invalid_password"},
+    {"timestamp": "2026-05-16T06:14:14Z", "event": "auth_failed", "user": "c.patel", "src_ip": "185.220.101.42", "target": "vpn-gw-01", "reason": "invalid_password"},
+    {"timestamp": "2026-05-16T06:14:22Z", "event": "auth_failed", "user": "d.lee", "src_ip": "185.220.101.42", "target": "vpn-gw-01", "reason": "invalid_password"},
+    {"timestamp": "2026-05-16T06:14:29Z", "event": "auth_failed", "user": "e.santos", "src_ip": "185.220.101.42", "target": "vpn-gw-01", "reason": "invalid_password"},
+    {"_summary": "42 additional failed auth events redacted for brevity, all from 185.220.101.42, distinct usernames, single attempt per user, one every 4 to 7 seconds. Pattern consistent with password spray (one password tried against many accounts)."},
+    {"timestamp": "2026-05-16T06:16:51Z", "event": "auth_failed", "user": "i.wong", "src_ip": "185.220.101.42", "target": "vpn-gw-01", "reason": "invalid_password"},
+    {"timestamp": "2026-05-16T06:16:55Z", "event": "auth_failed", "user": "j.alvarez", "src_ip": "185.220.101.42", "target": "vpn-gw-01", "reason": "invalid_password"},
+    {"timestamp": "2026-05-16T06:17:23Z", "event": "auth_success", "user": "j.alvarez", "src_ip": "185.220.101.42", "target": "vpn-gw-01", "mfa": "not_enrolled", "session_id": "VPN-7741-A"},
+    {"timestamp": "2026-05-16T06:18:04Z", "event": "auth_success", "user": "j.alvarez", "src_ip": "10.50.12.88", "target": "WORKSTATION-J-ALVAREZ", "logon_type": "RemoteInteractive", "note": "internal IP from VPN pool"},
+    {"timestamp": "2026-05-16T06:23:08Z", "event": "auth_success", "user": "j.alvarez", "src_ip": "10.50.12.88", "target": "FILE-SRV-02", "logon_type": "Network", "share_accessed": "\\\\FILE-SRV-02\\Finance$", "note": "User has standing access to Finance share. First access from VPN subnet in 90 days."}
+  ],
+  "baseline_for_user": {
+    "user": "j.alvarez",
+    "typical_login_hours_utc": "04:00 to 14:00",
+    "typical_source_geo": "Dubai, AE",
+    "typical_source_asn": "AS5384 Emirates Telecom",
+    "mfa_enrolled": false,
+    "last_password_change": "2024-08-12"
+  }
+}

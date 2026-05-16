@@ -1,0 +1,10 @@
+{
+  "source": "Palo Alto NGFW perimeter",
+  "query_window": "2026-05-16T09:50:00Z to 2026-05-16T18:00:00Z",
+  "events": [],
+  "outbound_to_phishing_infrastructure": {
+    "microsoft-secure-login.com": 0,
+    "194.135.33.187": 0
+  },
+  "note": "Zero corporate endpoint connections to attacker infrastructure during or after the campaign window."
+}

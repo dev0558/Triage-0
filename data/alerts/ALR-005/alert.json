@@ -1,0 +1,19 @@
+{
+  "alert_id": "ALR-2026-051610-2207",
+  "timestamp": "2026-05-16T10:22:07Z",
+  "severity": "HIGH",
+  "rule_name": "Credential harvesting phishing campaign targeting employees",
+  "rule_id": "DET-EMAIL-0015",
+  "siem_source": "Microsoft Defender for Office 365",
+  "user_account": "47 recipients",
+  "user_display_name": "47 recipients across Finance, HR, Operations",
+  "department": "Multiple",
+  "source_ip": "194.135.33.187",
+  "source_geo": "Riga, LV",
+  "destination_systems": [
+    "Microsoft 365 mailboxes"
+  ],
+  "description": "47 employees received phishing email with subject 'Action required: Re-authenticate Microsoft 365 within 24 hours'. Sender domain spoofed as microsoft-secure-login[.]com. Embedded URL points to credential harvester. Email security platform quarantined messages on delivery based on URL reputation hit. Three recipients manually reported as phishing. No click-through events recorded.",
+  "raw_log_excerpt": "[Defender for O365] Action=Quarantined Subject='Action required: Re-authenticate Microsoft 365 within 24 hours' From=security-noreply@microsoft-secure-login.com URL=https://microsoft-secure-login.com/oauth/verify?id=...",
+  "tags": ["phishing", "credential_harvesting", "T1566.002", "quarantined"]
+}

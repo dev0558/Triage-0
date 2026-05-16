@@ -1,0 +1,9 @@
+{
+  "source": "Active Directory + VPN Gateway",
+  "query_window": "2026-05-16T08:00:00Z to 2026-05-16T10:00:00Z",
+  "events": [
+    {"timestamp": "2026-05-16T08:42:11Z", "event": "auth_success", "user": "k.ito", "src_ip": "10.50.18.42", "src_geo": "Dubai, AE (office subnet)", "target": "DEV-MBP-04", "mfa": "passed_totp", "logon_type": "Interactive"}
+  ],
+  "spray_indicators": "None.",
+  "note": "User logged in from office network at start of workday. Standard pattern."
+}

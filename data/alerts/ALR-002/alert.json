@@ -1,0 +1,20 @@
+{
+  "alert_id": "ALR-2026-051609-3318",
+  "timestamp": "2026-05-16T02:18:44Z",
+  "severity": "HIGH",
+  "rule_name": "Impossible travel: simultaneous logins from geographically separated locations",
+  "rule_id": "DET-AUTH-0019",
+  "siem_source": "Splunk ES",
+  "user_account": "m.takahashi",
+  "user_display_name": "Mariko Takahashi",
+  "department": "Engineering",
+  "source_ip": "203.104.248.91",
+  "source_geo": "Tokyo, JP",
+  "destination_systems": [
+    "vpn-gw-01.corp.local",
+    "git.corp.local"
+  ],
+  "description": "User m.takahashi logged in from Tokyo, JP at 02:14 UTC. Prior session within last 24h was from Dubai, AE at 14:32 UTC the previous day. Geographic distance ~7,900 km cannot be traversed in elapsed time. MFA challenge passed on both sessions.",
+  "raw_log_excerpt": "May 16 02:14:08 vpn-gw-01 sshd[22104]: Accepted publickey for m.takahashi from 203.104.248.91 port 49281 ssh2 (mfa=passed)",
+  "tags": ["authentication", "impossible_travel", "T1078", "anomaly"]
+}

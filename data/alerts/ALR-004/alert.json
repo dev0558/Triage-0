@@ -1,0 +1,19 @@
+{
+  "alert_id": "ALR-2026-051611-8814",
+  "timestamp": "2026-05-16T11:08:33Z",
+  "severity": "MEDIUM",
+  "rule_name": "Sustained authentication brute force against internet-facing RDP",
+  "rule_id": "DET-AUTH-0072",
+  "siem_source": "Splunk ES",
+  "user_account": "multiple",
+  "user_display_name": "Multiple targeted accounts",
+  "department": "Infrastructure",
+  "source_ip": "192.241.137.0/24 (range, 12 distinct IPs)",
+  "source_geo": "Multiple (US, NL, DE)",
+  "destination_systems": [
+    "rdp-bastion-01.corp.local"
+  ],
+  "description": "1,247 failed RDP authentication attempts observed against rdp-bastion-01 over a 4 hour window. Source IPs span 12 distinct addresses within 192.241.137.0/24 (DigitalOcean droplet range historically used by RDP brute force operators). Targeted accounts include Administrator, admin, sa, ops, jenkins, deploy. No successful authentications.",
+  "raw_log_excerpt": "May 16 07:14:08 rdp-bastion-01 Microsoft-Windows-Security-Auditing[4625]: Failed login user=Administrator src_ip=192.241.137.84 LogonType=10",
+  "tags": ["authentication", "brute_force", "T1110.001", "internet_exposure"]
+}

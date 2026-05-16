@@ -1,0 +1,14 @@
+{
+  "source": "Microsoft Defender for Office 365 + endpoint URL telemetry (Safe Links)",
+  "endpoint": "Mail flow + employee endpoints",
+  "query_window": "2026-05-16T09:50:00Z to 2026-05-16T11:30:00Z",
+  "events": [
+    {"timestamp": "2026-05-16T09:54:18Z", "event": "email_delivery", "from": "security-noreply@microsoft-secure-login.com", "recipients_count": 47, "action": "delivered_then_quarantined", "delay_seconds": 12, "note": "Defender ATP URL reputation hit fired ~12 seconds post-delivery; messages auto-pulled from inboxes via ZAP (Zero-Hour Auto Purge)"},
+    {"timestamp": "2026-05-16T09:56:44Z", "event": "user_phishing_report", "user": "Finance employee A", "action": "reported_via_button"},
+    {"timestamp": "2026-05-16T09:58:11Z", "event": "user_phishing_report", "user": "Finance employee B", "action": "reported_via_button"},
+    {"timestamp": "2026-05-16T10:01:33Z", "event": "user_phishing_report", "user": "Finance employee C", "action": "reported_via_button"},
+    {"_aggregation": {"safe_links_clicks_on_phishing_url": 0, "credential_submissions_to_harvester": 0, "messages_remaining_in_inboxes": 0, "zap_purge_success_rate": "47/47"}}
+  ],
+  "edr_detections": [],
+  "post_quarantine_user_endpoint_activity": "No outbound connections to microsoft-secure-login.com from any corporate endpoint at any time. No credential submission telemetry."
+}

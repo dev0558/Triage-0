@@ -1,0 +1,27 @@
+{
+  "user": "m.takahashi",
+  "display_name": "Mariko Takahashi",
+  "department": "Engineering",
+  "role": "Senior Platform Engineer",
+  "typical_login_hours_utc": "03:30 to 16:00 (Dubai) and 22:00 to 09:00 (Tokyo when traveling)",
+  "typical_source_geo": "Dubai, AE (primary), Tokyo, JP (frequent)",
+  "typical_source_asn": "AS5384 Emirates Telecom, AS2914 NTT Communications",
+  "mfa_enrolled": true,
+  "mfa_method": "FIDO2 hardware key",
+  "last_password_change": "2026-03-22",
+  "approved_travel_requests_last_90d": [
+    {
+      "ticket": "TRV-2026-0488",
+      "destination": "Tokyo, JP",
+      "start": "2026-05-15",
+      "end": "2026-05-29",
+      "purpose": "Quarterly engineering offsite at Tokyo office",
+      "approved_by": "VP Engineering",
+      "submitted": "2026-04-12"
+    }
+  ],
+  "ticketing_notes": "User is a dual-region engineer who works regularly from both Dubai HQ and Tokyo office. Last visited Tokyo office in February 2026 (TRV-2026-0204) and November 2025 (TRV-2025-1077).",
+  "historical_logins_from_tokyo_last_180d": 47,
+  "historical_logins_from_japan_asn_last_180d": 64,
+  "anomaly_score_current": 8.7
+}

@@ -1,0 +1,24 @@
+{
+  "source": "Aggregated TI feeds (MISP, AlienVault OTX, AbuseIPDB, internal)",
+  "queried_indicators": [
+    {
+      "indicator": "192.241.137.0/24",
+      "type": "ipv4_range",
+      "first_seen": "2024-01-08",
+      "last_seen": "2026-05-16",
+      "tags": ["rdp_bruteforce", "high_volume", "hosting_provider_abuse", "shodan_internet_scanner_adjacent"],
+      "abuseipdb_score_average": 82,
+      "asn": "AS14061 DigitalOcean LLC",
+      "notes": "DigitalOcean droplet range repeatedly abused for opportunistic RDP brute force operations. Tracked across 200+ incidents in 2025-2026. Not attributed to a specific named threat actor; likely commodity botnet activity for sale on underground markets. No evidence of targeted reconnaissance against your organization specifically.",
+      "campaigns_observed": ["Opportunistic RDP credential stuffing 2025-2026"]
+    }
+  ],
+  "internet_exposure_check": {
+    "asset": "rdp-bastion-01.corp.local (public NAT 203.0.113.27)",
+    "shodan_visible": true,
+    "exposed_port": "TCP/3389",
+    "banner": "Microsoft Terminal Services",
+    "exposure_duration_estimated_days": 44,
+    "note": "Asset is internet-visible. Confirmed via Shodan historical data."
+  }
+}

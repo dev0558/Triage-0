@@ -1,0 +1,45 @@
+{
+  "source": "Aggregated TI feeds (MISP, AlienVault OTX, AbuseIPDB, internal)",
+  "queried_indicators": [
+    {
+      "indicator": "185.220.101.42",
+      "type": "ipv4",
+      "first_seen": "2023-11-04",
+      "last_seen": "2026-05-16",
+      "tags": ["tor_exit_node", "credential_stuffing", "brute_force"],
+      "abuseipdb_score": 100,
+      "geo": "Frankfurt, DE",
+      "asn": "AS6939 Hurricane Electric",
+      "notes": "Active Tor exit node operated by the Chaos Computer Club. Repeatedly observed in distributed password spray campaigns against Microsoft 365 and Citrix gateways throughout 2025 to 2026.",
+      "campaigns_observed": ["FIN8 staging infra Q1 2026"]
+    },
+    {
+      "indicator": "45.142.213.67",
+      "type": "ipv4",
+      "first_seen": "2026-03-22",
+      "last_seen": "2026-05-15",
+      "tags": ["c2", "cobalt_strike", "exfiltration", "high_confidence"],
+      "abuseipdb_score": 96,
+      "geo": "Sofia, BG",
+      "asn": "AS9009 M247 Europe",
+      "notes": "High confidence Cobalt Strike Team Server. Mandiant attribution to FIN8 cluster (UNC4423). Reused across 3 known intrusions in financial services sector since March 2026. Self-signed cert hash matches FIN8 toolkit fingerprint.",
+      "campaigns_observed": ["FIN8 Operation Mintsplit", "FIN8 Q2 2026 campaign"]
+    }
+  ],
+  "user_breach_history": {
+    "user": "j.alvarez",
+    "email": "j.alvarez@corp.local",
+    "personal_email_breaches": [
+      {"breach": "MegaCorp Forum Leak", "date": "2025-11-08", "data_exposed": ["email", "plaintext_password"], "note": "Password reuse pattern likely. User password unchanged since 2024-08-12."}
+    ]
+  },
+  "mitre_attack_mapping": {
+    "T1110.003": "Brute Force: Password Spraying",
+    "T1078": "Valid Accounts",
+    "T1021.002": "Remote Services: SMB/Windows Admin Shares",
+    "T1059.001": "Command and Scripting Interpreter: PowerShell",
+    "T1560.001": "Archive Collected Data: Archive via Utility",
+    "T1041": "Exfiltration Over C2 Channel",
+    "T1070.004": "Indicator Removal: File Deletion"
+  }
+}

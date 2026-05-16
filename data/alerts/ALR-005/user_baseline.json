@@ -1,0 +1,9 @@
+{
+  "user": "n/a (campaign-level)",
+  "display_name": "47 recipients across Finance, HR, Operations",
+  "campaign_target_pattern": "Lookups suggest harvester pulled targets from public corporate LinkedIn listings. Targeting non-technical departments where credential reuse and phishing susceptibility is typically higher.",
+  "mfa_coverage_for_targets": "44 of 47 targets are MFA-enrolled (FIDO2 or TOTP). 3 are exempt due to legacy app dependencies and have compensating controls.",
+  "approved_travel_requests_last_90d": [],
+  "ticketing_notes": "Three users (Finance team) submitted phishing reports via the Defender for O365 'Report message' button within 8 minutes of email delivery. Security awareness training is mandatory for all staff with refresher completed within the last 12 months by 100% of targets.",
+  "anomaly_score_current": 6.4
+}

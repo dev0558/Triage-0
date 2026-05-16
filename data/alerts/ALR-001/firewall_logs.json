@@ -1,0 +1,18 @@
+{
+  "source": "Palo Alto NGFW perimeter",
+  "query_window": "2026-05-16T06:10:00Z to 2026-05-16T06:40:00Z",
+  "events": [
+    {"timestamp": "2026-05-16T06:14:00Z", "action": "allowed", "src_ip": "185.220.101.42", "dst_ip": "203.0.113.10", "dst_port": 443, "service": "vpn-gateway", "bytes": 4521, "session_id": "fw-441120"},
+    {"timestamp": "2026-05-16T06:17:23Z", "action": "allowed", "src_ip": "185.220.101.42", "dst_ip": "203.0.113.10", "dst_port": 443, "service": "vpn-gateway", "bytes": 18922, "session_id": "fw-441188", "note": "successful VPN tunnel established"},
+    {"timestamp": "2026-05-16T06:31:02Z", "action": "allowed", "src_ip": "10.20.50.41", "src_host": "FILE-SRV-02", "dst_ip": "45.142.213.67", "dst_port": 443, "service": "https-egress", "bytes_out": 4218, "bytes_in": 1102, "session_id": "fw-441502", "note": "first outbound from FILE-SRV-02 to this destination in 90 days"},
+    {"timestamp": "2026-05-16T06:31:14Z", "action": "allowed", "src_ip": "10.20.50.41", "src_host": "FILE-SRV-02", "dst_ip": "45.142.213.67", "dst_port": 443, "service": "https-egress", "bytes_out": 134217728, "bytes_in": 8842, "session_id": "fw-441503"},
+    {"timestamp": "2026-05-16T06:32:48Z", "action": "allowed", "src_ip": "10.20.50.41", "src_host": "FILE-SRV-02", "dst_ip": "45.142.213.67", "dst_port": 443, "service": "https-egress", "bytes_out": 201326592, "bytes_in": 12044, "session_id": "fw-441516"},
+    {"timestamp": "2026-05-16T06:34:31Z", "action": "allowed", "src_ip": "10.20.50.41", "src_host": "FILE-SRV-02", "dst_ip": "45.142.213.67", "dst_port": 443, "service": "https-egress", "bytes_out": 176580618, "bytes_in": 6201, "session_id": "fw-441529"},
+    {"_aggregation": {"src_host": "FILE-SRV-02", "dst_ip": "45.142.213.67", "total_bytes_out": 512145080, "duration_seconds": 209, "human_readable": "approximately 488 MB exfiltrated to 45.142.213.67 over 3 minutes 29 seconds"}}
+  ],
+  "egress_baseline_FILE-SRV-02": {
+    "typical_egress_destinations": ["update.microsoft.com", "windowsupdate.com", "internal_only"],
+    "typical_daily_egress_bytes": 4200000,
+    "anomaly_score": 9.7
+  }
+}

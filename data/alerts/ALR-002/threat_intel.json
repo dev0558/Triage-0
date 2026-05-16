@@ -1,0 +1,22 @@
+{
+  "source": "Aggregated TI feeds (MISP, AlienVault OTX, AbuseIPDB, internal)",
+  "queried_indicators": [
+    {
+      "indicator": "203.104.248.91",
+      "type": "ipv4",
+      "first_seen": "2019-08-12",
+      "last_seen": "2026-05-16",
+      "tags": ["residential_isp"],
+      "abuseipdb_score": 0,
+      "geo": "Tokyo, JP",
+      "asn": "AS2914 NTT Communications",
+      "notes": "NTT Flets residential broadband subscriber range. No reports of malicious activity. Not associated with Tor, hosting providers, or known campaigns.",
+      "campaigns_observed": []
+    }
+  ],
+  "user_breach_history": {
+    "user": "m.takahashi",
+    "email": "m.takahashi@corp.local",
+    "personal_email_breaches": []
+  }
+}

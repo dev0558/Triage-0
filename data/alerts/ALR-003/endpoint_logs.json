@@ -1,0 +1,11 @@
+{
+  "source": "CrowdStrike Falcon EDR",
+  "endpoint": "DEV-MBP-04",
+  "query_window": "2026-05-16T09:00:00Z to 2026-05-16T10:00:00Z",
+  "events": [
+    {"timestamp": "2026-05-16T09:14:18Z", "event": "process_create", "user": "k.ito", "process": "Linear.app/Contents/MacOS/Linear", "cmdline": "/Applications/Linear.app/Contents/MacOS/Linear", "code_signature": "Developer ID Application: Linear Orbit Inc (7VZ2S3KDB7)", "signature_status": "valid"},
+    {"timestamp": "2026-05-16T09:14:20Z", "event": "network_connect", "process": "Linear", "remote_host": "api.linear.app", "remote_port": 443, "protocol": "tcp"}
+  ],
+  "edr_detections": [],
+  "note": "Process is a signed Electron app from Linear Orbit Inc. Code signature valid. No injection, no unusual behavior."
+}

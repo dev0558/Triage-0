@@ -1,0 +1,27 @@
+{
+  "source": "Aggregated TI feeds (MISP, AlienVault OTX, PhishTank, URLScan, internal)",
+  "queried_indicators": [
+    {
+      "indicator": "microsoft-secure-login.com",
+      "type": "domain",
+      "registered": "2026-05-13",
+      "tags": ["phishing", "credential_harvester", "microsoft_brand_impersonation"],
+      "phishtank_verified": true,
+      "urlscan_visualisation_hash": "a4f8e2b91c3d",
+      "registrar": "Namecheap",
+      "ssl_issuer": "Let's Encrypt (issued 2026-05-13)",
+      "notes": "Newly registered domain spoofing Microsoft branding. URLScan capture from 2026-05-14 shows pixel-perfect clone of Microsoft 365 login page with credential POST to /oauth/verify endpoint. Tied to phishing kit known as 'EvilProxy v3' which can also bypass MFA via session token theft. PhishTank confirmed report 2026-05-14T22:11Z.",
+      "campaigns_observed": ["EvilProxy v3 campaign May 2026"]
+    },
+    {
+      "indicator": "194.135.33.187",
+      "type": "ipv4",
+      "tags": ["hosting", "phishing_infra", "fast_flux_adjacent"],
+      "abuseipdb_score": 78,
+      "asn": "AS200651 Flokinet Ltd",
+      "geo": "Riga, LV",
+      "notes": "Bulletproof-adjacent hosting provider repeatedly seen hosting short-lived phishing infrastructure."
+    }
+  ],
+  "campaign_observability_internal": "This is the 4th distinct EvilProxy v3 campaign observed targeting your organization in 2026. Prior campaigns also quarantined successfully. No historical credential compromise from this kit."
+}

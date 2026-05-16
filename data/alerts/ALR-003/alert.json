@@ -1,0 +1,23 @@
+{
+  "alert_id": "ALR-2026-051609-4202",
+  "timestamp": "2026-05-16T09:42:18Z",
+  "severity": "MEDIUM",
+  "rule_name": "Outbound traffic to unrecognized external domain from internal endpoint",
+  "rule_id": "DET-EGRESS-0031",
+  "siem_source": "Splunk ES",
+  "user_account": "k.ito",
+  "user_display_name": "Kenji Ito",
+  "department": "Engineering",
+  "source_host": "DEV-MBP-04",
+  "destination_domain": "api.linear.app",
+  "destination_ip": "172.66.40.119",
+  "destination_geo": "San Francisco, US",
+  "destination_systems": [
+    "DEV-MBP-04"
+  ],
+  "source_ip": "10.50.18.42",
+  "source_geo": "Dubai, AE (office subnet)",
+  "description": "Host DEV-MBP-04 initiated 47 outbound HTTPS connections to api.linear.app over 32 minutes, totalling 2.4 MB. Destination not on corporate allowlist. No prior outbound traffic from this host to this domain in the last 90 days.",
+  "raw_log_excerpt": "May 16 09:14:22 fw-edge-01 traffic: src=10.50.18.42 dst=172.66.40.119 dst_port=443 dst_host=api.linear.app action=allowed bytes_out=4218",
+  "tags": ["egress", "unrecognized_destination", "T1071.001"]
+}

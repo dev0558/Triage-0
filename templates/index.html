@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRIAGE-0 // Incident Triage Agent</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <div class="classification-strip top">UNCLASSIFIED &middot;&middot; PROOF OF CONCEPT &middot;&middot; SYNTHETIC DATA &middot;&middot; INTERNAL USE</div>
+
+  <div class="app-shell">
+
+    <!-- ============== INBOX SIDEBAR ============== -->
+    <aside class="inbox" id="inbox">
+      <header class="inbox-head">
+        <div class="inbox-title">ALERT INBOX</div>
+        <div class="inbox-count"><span id="inboxCount">0</span> in queue</div>
+      </header>
+      <div class="inbox-list" id="inboxList">
+        <div class="inbox-loading">loading queue...</div>
+      </div>
+      <footer class="inbox-foot">
+        <div class="hdr-label">FILTER</div>
+        <div class="filter-row">
+          <button class="filter-pill active" data-filter="all">ALL</button>
+          <button class="filter-pill" data-filter="NEW">NEW</button>
+          <button class="filter-pill" data-filter="DONE">DONE</button>
+        </div>
+      </footer>
+    </aside>
+
+    <!-- ============== MAIN DOSSIER ============== -->
+    <main class="dossier-wrap">
+
+      <header class="document-header">
+        <div class="hdr-col hdr-left">
+          <div class="hdr-label">CASE FILE NO.</div>
+          <div class="hdr-value" id="caseId">— select an alert —</div>
+        </div>
+        <div class="hdr-col hdr-center">
+          <div class="hdr-label">DIVISION</div>
+          <div class="hdr-value">SOC // INTELLIGENCE</div>
+        </div>
+        <div class="hdr-col hdr-right">
+          <div class="status-line">
+            <span class="status-dot" id="systemStatus"><span class="dot"></span><span class="label">STANDBY</span></span>
+            <span class="hdr-clock" id="clock">--:--:-- UTC</span>
+          </div>
+          <div class="hdr-label hdr-model">MODEL &middot; gemini-2.5-flash</div>
+        </div>
+      </header>
+
+      <main class="dossier">
+
+        <div class="title-block">
+          <div class="title-emblem" aria-hidden="true">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="TRIAGE-0" />
+          </div>
+          <h1 class="dossier-title">Incident Triage Report</h1>
+          <div class="dossier-rule"></div>
+          <p class="dossier-sub">Autonomous tier-1 analyst pipeline &middot; agentic loop &middot; max 8 tool calls</p>
+          <div class="begin-row">
+            <button class="begin-btn" id="runBtn" disabled>
+              <span class="begin-mark">▮</span>
+              <span class="begin-text">SELECT AN ALERT</span>
+            </button>
+            <div class="begin-hint" id="beginHint">click an alert in the inbox to begin</div>
+          </div>
+        </div>
+
+        <section class="section" id="sectionAlert">
+          <header class="section-head">
+            <span class="section-num">§ 01</span>
+            <h2 class="section-title">Case Brief</h2>
+            <span class="section-state" id="alertState">EMPTY</span>
+          </header>
+          <div class="section-body" id="alertBody">
+            <div class="placeholder"><em>Select an alert from the inbox to load the case brief.</em></div>
+          </div>
+        </section>
+
+        <section class="section" id="sectionAgent">
+          <header class="section-head">
+            <span class="section-num">§ 02</span>
+            <h2 class="section-title">Investigation Log</h2>
+            <span class="section-state" id="agentState">IDLE</span>
+          </header>
+          <div class="section-body" id="agentBody">
+            <div class="placeholder"><em>Agent reasoning, tool calls, and retrieval will appear here, in sequence.</em></div>
+          </div>
+        </section>
+
+        <section class="section" id="sectionReport">
+          <header class="section-head">
+            <span class="section-num">§ 03</span>
+            <h2 class="section-title">Analyst Findings</h2>
+            <span class="section-state" id="reportState">PENDING</span>
+          </header>
+          <div class="verdict-banner" id="verdictBanner" hidden>
+            <div class="verdict-row">
+              <div class="verdict-label">VERDICT</div>
+              <div class="verdict-value" id="verdictValue">—</div>
+              <div class="verdict-confidence" id="verdictConfidence">—</div>
+            </div>
+          </div>
+          <div class="section-body" id="reportBody">
+            <div class="placeholder"><em>Findings will be transcribed below once synthesis completes.</em></div>
+          </div>
+        </section>
+
+        <footer class="dossier-footer">
+          <div class="pipeline" id="pipeline">
+            <div class="stage" data-stage="planning"><span class="stage-num">01</span>PLAN</div>
+            <div class="stage" data-stage="investigating"><span class="stage-num">02</span>INVESTIGATE</div>
+            <div class="stage" data-stage="synthesis"><span class="stage-num">03</span>SYNTHESIZE</div>
+            <div class="stage" data-stage="done"><span class="stage-num">04</span>FILE</div>
+          </div>
+          <div class="footer-note">End of document &middot; Generated by TRIAGE&#8209;0 &middot; Not for production use</div>
+        </footer>
+      </main>
+    </main>
+
+  </div>
+
+  <div class="classification-strip bottom">UNCLASSIFIED &middot;&middot; PROOF OF CONCEPT &middot;&middot; SYNTHETIC DATA &middot;&middot; INTERNAL USE</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

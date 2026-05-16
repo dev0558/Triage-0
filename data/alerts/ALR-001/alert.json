@@ -1,0 +1,20 @@
+{
+  "alert_id": "ALR-2026-051612-7741",
+  "timestamp": "2026-05-16T06:34:12Z",
+  "severity": "HIGH",
+  "rule_name": "Multiple failed authentications followed by successful login from anomalous geolocation",
+  "rule_id": "DET-AUTH-0047",
+  "siem_source": "Splunk ES",
+  "user_account": "j.alvarez",
+  "user_display_name": "Javier Alvarez",
+  "department": "Finance",
+  "source_ip": "185.220.101.42",
+  "source_geo": "Frankfurt, DE (Tor exit)",
+  "destination_systems": [
+    "vpn-gw-01.corp.local",
+    "WORKSTATION-J-ALVAREZ"
+  ],
+  "description": "47 failed authentication attempts originating from 185.220.101.42 over a 3 minute window targeting distinct user accounts, followed by a successful authentication on j.alvarez from the same source IP. User typically authenticates from 10.20.30.0/24 (Dubai office subnet). No prior VPN session from this geo for this user in the last 90 days.",
+  "raw_log_excerpt": "May 16 06:17:23 vpn-gw-01 sshd[18432]: Accepted password for j.alvarez from 185.220.101.42 port 51284 ssh2",
+  "tags": ["authentication", "credential_access", "T1110.003", "anomaly"]
+}

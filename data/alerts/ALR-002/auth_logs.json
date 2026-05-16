@@ -1,0 +1,13 @@
+{
+  "source": "Active Directory + VPN Gateway",
+  "query_window": "2026-05-15T14:00:00Z to 2026-05-16T03:00:00Z",
+  "events": [
+    {"timestamp": "2026-05-15T14:32:11Z", "event": "auth_success", "user": "m.takahashi", "src_ip": "10.20.30.18", "src_geo": "Dubai, AE (office subnet)", "target": "vpn-gw-01", "mfa": "passed_fido2", "session_id": "VPN-3311-A"},
+    {"timestamp": "2026-05-15T14:32:11Z", "event": "session_close", "user": "m.takahashi", "session_id": "VPN-3311-A", "duration_seconds": 0, "reason": "user_logoff", "note": "Brief office login before EOD"},
+    {"timestamp": "2026-05-15T15:14:42Z", "event": "session_close", "user": "m.takahashi", "session_id": "VPN-3299-B", "reason": "user_logoff", "note": "End of working day Dubai time"},
+    {"timestamp": "2026-05-16T02:14:08Z", "event": "auth_success", "user": "m.takahashi", "src_ip": "203.104.248.91", "src_geo": "Tokyo, JP", "src_asn": "AS2914 NTT Communications", "target": "vpn-gw-01", "mfa": "passed_fido2", "session_id": "VPN-3318-A", "note": "FIDO2 hardware key authentication. Physical possession of key required."},
+    {"timestamp": "2026-05-16T02:15:33Z", "event": "auth_success", "user": "m.takahashi", "src_ip": "10.50.14.22", "target": "git.corp.local", "logon_type": "Network", "note": "Normal git operations via VPN tunnel"}
+  ],
+  "spray_indicators": "None. No failed authentications observed against m.takahashi or any other account from 203.104.248.91 in the last 30 days.",
+  "concurrent_session_check": "Prior Dubai session was closed at 15:14:42 UTC the previous day. Tokyo session opened ~11 hours later. No overlap."
+}

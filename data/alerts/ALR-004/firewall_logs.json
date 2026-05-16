@@ -1,0 +1,15 @@
+{
+  "source": "Palo Alto NGFW perimeter",
+  "query_window": "2026-05-16T07:00:00Z to 2026-05-16T11:10:00Z",
+  "events": [
+    {"timestamp": "2026-05-16T07:14:00Z", "action": "allowed", "src_ip": "192.241.137.84", "dst_ip": "203.0.113.27", "dst_port": 3389, "service": "rdp", "bytes": 8420, "session_id": "fw-771301", "note": "Inbound RDP to rdp-bastion-01 public NAT"},
+    {"_aggregation": {"inbound_rdp_from_192.241.137.0/24": 1247, "session_durations": "all sessions terminated within 8-12 seconds (consistent with failed auth at logon screen)"}}
+  ],
+  "outbound_from_target": "No anomalous outbound traffic from rdp-bastion-01 during or after the brute force window. No connections to threat-intel-flagged destinations.",
+  "egress_baseline_rdp-bastion-01": {
+    "typical_egress_destinations": ["update.microsoft.com", "internal_only"],
+    "typical_daily_egress_bytes": 1200000,
+    "current_egress_bytes": 1080000,
+    "anomaly_score": 0.2
+  }
+}

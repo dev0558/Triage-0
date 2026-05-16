@@ -1,0 +1,10 @@
+{
+  "source": "Active Directory + Azure AD sign-in logs",
+  "query_window": "2026-05-16T09:50:00Z to 2026-05-16T18:00:00Z",
+  "events": [
+    {"_summary": "Authentication activity across all 47 targeted users post-delivery shows only routine logins from expected corporate IPs and approved MFA challenges. No new tokens, no anomalous geos, no impossible-travel flags."}
+  ],
+  "spray_indicators": "None.",
+  "successful_logins_from_attacker_infrastructure": 0,
+  "note": "Zero indicators of post-phishing credential compromise across the target population."
+}
